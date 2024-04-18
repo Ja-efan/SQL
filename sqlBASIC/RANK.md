@@ -24,7 +24,7 @@ FROM HR_EMPLOYEES;
 
 **실행 결과**
 
-![alt text](image.png)
+![alt text](RANK_image01.png)
 
 김민석 팀원과 김송이 팀장이 같은 급여를 받아 공동 순위(2)가 발생했고, 그 다음 순위인 김연주 팀원과 양성태 팀원도 공동 순위(4)로 매겨진 것을 확인할 수 있다.
 
@@ -50,7 +50,7 @@ FROM HR_EMPLOYEES;
 
 **실행 결과**
 
-![alt text](image-1.png)
+![alt text](RANK_image02.png)
 
 김민석 팀원과 김송이 팀장이 같은 급여를 받아 공동 순위(2)가 발생했고, 그 다음 순위인 김연주 팀원과 양성태 팀원도 공동 순위(3)로 매겨진 것을 확인할 수 있다.
 
@@ -83,7 +83,7 @@ FROM HR_EMPLOYEES;
 
 **실행 결과**
 
-![alt text](image-2.png)
+![alt text](RANK_image03.png)
 
 </br>
 
@@ -106,7 +106,7 @@ FROM HR_EMPLOYEES;
 ```
 **실행결과**
 
-![alt text](image-3.png)
+![alt text](RANK_image04.png)
 
 급여가 같은 김민석 팀원과 김솜이 팀장은 EMP_NO를 기준으로 정렬된다.
 마찬가지로 김연주 팀원과 양성태 팀원도 급여가 동일하므로 EMP_NO를 기준으로 정렬된 것을 확인할 수 있다.
