@@ -1,0 +1,16 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/293261
+# 물고기 종류 별 대어 찾기 
+
+# GROUP BY를 사용할 때 SELECT 절에 사용된 컬럼은 모두 집계함수이거나 GROUP BY 절에 사용된 컬럼이어야 한다.
+
+WITH MAX_LENGTH AS (
+    SELECT FISH_TYPE, MAX(LENGTH) AS MAX_LENLGTH
+    FROM FISH_INFO 
+    GROUP BY FISH_TYPE
+)
+SELECT ID, FISH_NAME, LENGTH
+FROM FISH_INFO AS FI 
+LEFT JOIN FISH_NAME_INFO AS FNI
+USING(FISH_TYPE)
+WHERE (FISH_TYPE, LENGTH) IN (SELECT * FROM MAX_LENGTH)
+ORDER BY ID ASC;
