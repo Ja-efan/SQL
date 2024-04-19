@@ -1,0 +1,15 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/301647
+# 부모의 형질을 모두 가지는 대장균 찾기 
+# ECOLI_DATA
+
+WITH ECOLI_DATA2 AS(
+    SELECT ED.ID, ED.GENOTYPE, ED.PARENT_ID, A.GENOTYPE AS PARENT_GENOTYPE
+    FROM ECOLI_DATA AS ED
+    LEFT JOIN (SELECT ID, GENOTYPE FROM ECOLI_DATA) AS A
+    ON ED.PARENT_ID = A.ID
+)
+SELECT ID, GENOTYPE, PARENT_GENOTYPE
+FROM ECOLI_DATA2
+WHERE (GENOTYPE & PARENT_GENOTYPE) = PARENT_GENOTYPE # 부모 개체의 형질이 모두 존재해야 하므로 비트 and 연산의 결과는 부모 개체의 형질값이 되어야 한다.
+ORDER BY ID ASC;
+
